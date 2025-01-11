@@ -1,0 +1,70 @@
+#profile {
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradien biru */
+    color: white;
+    text-align: center;
+    padding: 300px 350px;
+    border-radius: 10px; /* Membuat sudut melengkung */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    position: relative; /* Untuk elemen dekoratif */
+    overflow: hidden;
+}
+
+#profile::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 250px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite; /* Animasi melayang */
+}
+
+#profile::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 250px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite; /* Animasi melayang */
+}
+
+#profile img {
+    width: 400px;
+    height: 450px;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    border: 5px solid white; /* Bingkai putih di sekitar gambar */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Bayangan untuk gambar */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Animasi hover */
+}
+
+#profile img:hover {
+    transform: scale(1.1); /* Membesarkan sedikit saat di-hover */
+}
+
+#profile h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#profile p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Animasi melayang */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+}
